@@ -1,0 +1,25 @@
+{
+  "name": "userman",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "DEBUG=http node server.js",
+    "start:watch": "DEBUG=http NODE_ENV=development nodemon --delay 80ms server.js --exec 'yarn inspect'",
+    "inspect": "kill-port --port 9229 && node --inspect=0.0.0.0:9229 server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.2",
+    "debug": "^3.1.0",
+    "express": "^4.16.3",
+    "http-proxy": "^1.17.0",
+    "kill-port": "^1.1.0",
+    "ngrok": "3.0.1",
+    "nodemon": "^1.17.4"
+  }
+}
